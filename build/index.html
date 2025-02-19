@@ -1,38 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-				content="width=device-width, initial-scale=1.0">
-	<meta name="description"
-				content="Gulp pack for easy html/php markup development">
-	<meta name="keywords"
-				content="">
-	<link rel="shortcut icon"
-				href="img/favicons/favicon.svg"
-				type="image/svg+xml">
-	<link rel="shortcut icon"
-				href="img/favicons/favicon.webp"
-				type="image/webp">
-	<link rel="shortcut icon"
-				href="img/favicons/favicon.png"
-				type="image/x-icon">
-	<link rel="stylesheet"
-				href="css/libs.min.css">
-	<link rel="stylesheet"
-				href="css/style.min.css">
-	<title>Easy-webdev-startpack v3.0</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Выездные дегустации вин Москва, винные игры, заказать сомелье на мероприятие">
+    <meta name="keywords" content="web, dev">
+
+    <link rel="shortcut icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="img/favicons/favicon.webp" type="image/webp">
+    <link rel="shortcut icon" href="img/favicons/favicon.png" type="image/x-icon">
+
+    <!-- <link rel="stylesheet" href="css/libs.min.css"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Дегустация вина</title>
 </head>
 
 
 <body>
-	<header class="header"></header>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="/" class="logo">
+                <svg width="169" height="176" viewBox="0 0 169 176">
+                    <use href="./img/sprite.svg#include--logo"
+                        xlink:href="./img/sprite.svg#include--logo" />
+              </svg>
+            </a>
 
-	<main class="main"></main>
-	<footer class="footer"></footer>
+            <div class="header__content">
+                <div class="header__contacts">
+                    <div class="col">
+                        <p class="text-muted">Москва и Санкт-Петербург</p>
 
-	<script src="js/libs.min.js"></script>
+                        <p class="link-icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14">
+                                <use href="./img/sprite.svg#include--mail"
+                                    xlink:href="./img/sprite.svg#include--logo" />
+                            </svg>
+                            <a href="mailto:gourmetshop-present@yandex.ru">gourmetshop-present@yandex.ru</a>
+                        </p>
+
+                        <p class="link-icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14">
+                                <use href="./img/sprite.svg#include--mail"
+                                    xlink:href="./img/sprite.svg#include--logo" />
+                            </svg>
+                            <a href="mailto:winetravel@gourmetshop.ru">winetravel@gourmetshop.ru</a>
+                        </p>
+                    </div>
+
+                    <div class="col">
+                        <p class="link-icon">
+                            <img src="img/phone.png" alt="">
+                            <a href="tel:+7 952 248 57 10">+7 952 248 57 10</a>
+                        </p>
+
+                        <p class="link-icon">
+                            <img src="img/phone.png" alt="">
+                            <a href="tel:+7 812 987 76 18">+7 812 987 76 18</a>
+                        </p>
+
+                        <p class="text-muted">ежедневно с 10.00 до 20.00</p>
+                    </div>
+
+                    <div class="col">
+                        <p class="link-icon">
+                            <svg width="15" height="15" viewBox="0 0 15 15">
+                                <use href="./img/sprite.svg#include--whatsapp"
+                                    xlink:href="./img/sprite.svg#include--logo" />
+                            </svg>
+                            <span>Написать в <a href="#">WhatsApp</a> 24/7</span>
+                        </p>
+
+                        <p class="link-icon">
+                            <svg width="16" height="13" viewBox="0 0 16 13">
+                                <use href="./img/sprite.svg#include--tlg"
+                                    xlink:href="./img/sprite.svg#include--logo" />
+                            </svg>
+                            <span>Написать в <a href="#">Telegram</a> 24/7</span>
+                        </p>
+
+                        <p></p>
+                    </div>
+                </div>
+
+                <nav></nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <main class="main container">
+        <section class="hero">
+            <div class="hero__bg">
+                <picture>
+                    <source srcset="img/hero-bg.webp" type="image/webp">
+                    <img src="img/hero-bg.jpg" alt="Дегустация вина">
+                </picture>
+            </div>
+
+            <h1>ДЕГУСТАЦИИ — НОВЫЙ ФОРМАТ МЕРОПРИЯТИЯ НА ВАШ ПРАЗДНИК!</h1>
+
+            <p>
+                Любая наша программа добавит яркости и впечатлений вашим гостям. Ведущий-сомелье станет пикантным
+                событием на Вашем празднике, проведет интересную и познавательную дегустацию.
+            </p>
+
+            <p>
+                <a href="#" class="btn">Подробнее</a>
+            </p>
+        </section>
+
+        <section class="wine-art">
+            <div class="wine-art__img">
+                <img src="img/wine-1.png" alt="Дегустация вина">
+
+                <img class="art-absolute" src="img/wine-2.png" alt="Дегустация вина">
+            </div>
+            <div class="wine-art__content">
+                <h2>Вино — это искусство в бокале</h2>
+
+                <p class="line-30">
+                    Вы планируете корпоратив и в поисках нового формата с&nbsp;элементами азарта? После конференции
+                    взбодрить
+                    гостей или пригласить партнеров на виски казино в неформальной обстановке? Организовать
+                    увлекательный День Рождения: поиграть в винное казино, винный квиз или слепую дегустацию с друзьями?
+                    Открыть бутылку шампанского саблей на свадьбу или провести Сабраж на Новый Год? Или просто сделать
+                    необычный подарок любимому человеку или добавить оригинальности в деловую встречу или тренинг?
+                </p>
+
+                <p class="line-30">
+                    Мы разработали различные винные программы для мероприятий с&nbsp;любым количеством гостей. С 2017
+                    года,
+                    провели более 1000 дегустаций и винных игр различного формата. Нет необходимости беспокоиться о
+                    подборе напитков на мероприятия, аренде бокалов и реквизитов - с радостью поможем организовать
+                    мероприятие "под ключ"!
+                </p>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2 class="text-center">О нас</h2>
+
+            <p class="line-30">
+                Мы проводим профессионально и увлекательно Винные Игры и Выездные Дегустации в Санкт-Петербурге и
+                Москве.
+            </p>
+
+            <p class="line-30">
+                А Дегустации — онлайн проводим для любых компаний и городов, ведь в таком формате можно отметить не
+                только онлайн-корпоратив, но это еще может быть и оригинальным подарком или неожиданным сюрпризом для
+                близкого человека! Дегустация вина это интересный и не скучный формат любого праздника.
+            </p>
+
+            <ul class="about-list">
+                <li class="about-item">
+                    <div class="icon">
+                        <picture>
+                            <source srcset="img/about-1.webp" type="image/webp">
+                            <img src="img/about-1.jpg" alt="Дегустация вина">
+                        </picture>
+                    </div>
+                    <h3>Винные игры<br>и выездные дегустации</h3>
+                    <p class="line-30">
+                        Приедем на вашу площадку.
+                        Поможем организовать все «под ключ»!
+                        Проведем азартно и интересно дегустацию, ведь с нами никогда не соскучишься!Работаем в Москве и
+                        Санкт-Петербурге.
+                    </p>
+                </li>
+
+                <li class="about-item">
+                    <div class="icon">
+                        <picture>
+                            <source srcset="img/about-2.webp" type="image/webp">
+                            <img src="img/about-2.jpg" alt="Дегустация вина">
+                        </picture>
+                    </div>
+                    <h3>Настольная игра<br>Винное Казино</h3>
+                    <p class="line-30">
+                        Мы разработали отличную настольную игру для вашей компании.
+                        Кстати, это еще и отличный вариант не только досуга, но и подарка любителю вина!
+                    </p>
+                </li>
+
+                <li class="about-item">
+                    <div class="icon">
+                        <picture>
+                            <source srcset="img/about-3.webp" type="image/webp">
+                            <img src="img/about-3.jpg" alt="Дегустация вина">
+                        </picture>
+                    </div>
+                    <h3>Сырные<br>тарелки и наборы</h3>
+                    <p class="line-30">
+                        Вкусные и продуманные закуски в коробочках для дегустации. Удобно и не требуется сервировка,
+                        доставка в день мероприятия.
+                    </p>
+                </li>
+            </ul>
+
+            <div class="about-actions">
+                <a href="#" class="btn">ЗАКАЗАТЬ ВЫЕЗДНУЮ ДЕГУСТАЦИЮ</a>
+                <a href="#" class="btn">ПОСМОТРЕТЬ ДЕГУСТАЦИИ</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <!-- <script src="js/libs.min.js"></script> -->
 <script src="js/main.min.js"></script>
 
 </body>
