@@ -52,7 +52,9 @@ h1,
     text-transform: uppercase;
 }
 
-h2 {
+h2,
+.title-page {
+    margin-bottom: 50px;
     font-size: 36px;
     text-transform: uppercase;
 }
@@ -74,6 +76,10 @@ a:not(.btn) {
         color: var(--text-primary);
         text-decoration: underline;
     }
+}
+
+section {
+    margin-bottom: 100px;
 }
 
 p {
@@ -101,6 +107,10 @@ p {
 
 .text-center {
     text-align: center;
+}
+
+.text-primary {
+    color: var(--text-primary);
 }
 
 .text-muted {
@@ -176,6 +186,52 @@ p {
     background-color: var(--color-hover);
 }
 
+.breadcrumbs {
+    background-image: url(../img/crumbs-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #fff;
+    height: 200px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    &__list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        li {
+            position: relative;
+
+            &:not(:last-child) {
+                &::after {
+                    content: '';
+                    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDcgMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02LjA4ODg3IDUuNTA1NDlMMS4wMDAyMyAwLjk5OTk3OCIgc3Ryb2tlPSIjOTI5MjkyIi8+CjxwYXRoIGQ9Ik0xIDEwLjAwMDFMNi4wODg2MyA1LjQ5NDYxIiBzdHJva2U9IiM5MjkyOTIiLz4KPC9zdmc+Cg==");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    position: absolute;
+                    top: 4px;
+                    right: -22px;
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+
+            &:last-child {
+                color: #929292;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
 .socials {
     display: flex;
     align-items: center;
@@ -213,7 +269,6 @@ p {
     background-color: var(--bg-image);
     color: #fff;
     height: 510px;
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,10 +297,6 @@ p {
             right: -80px;
         }
     }
-}
-
-.about {
-    margin-bottom: 100px;
 }
 
 .about-list {
@@ -306,7 +357,6 @@ p {
 .online {
     color: #fff;
     height: 350px;
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,8 +365,6 @@ p {
 
 .team {
     position: relative;
-    margin-bottom: 100px;
-
     display: flex;
     gap: 30px;
 
@@ -411,7 +459,6 @@ p {
 .present {
     color: #fff;
     height: 350px;
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -422,7 +469,6 @@ p {
     line-height: 30px;
     position: relative;
     min-height: 760px;
-    margin-bottom: 100px;
 
     &__inner {
         display: flex;
@@ -498,5 +544,80 @@ p {
             display: inline-block;
             min-width: 12px;
         }
+    }
+}
+
+.tasting {
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 130px;
+        margin-bottom: 70px;
+
+        img {
+            max-width: 470px;
+        }
+    }
+
+    .text-primary {
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+.program {
+
+    &__inner {
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 60px 40px;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+.video-block {
+
+    video {
+        width: 100%;
+    }
+
+    .video-action {
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-quote {
+    border-left: 5px solid var(--text-primary);
+    max-width: 780px;
+    padding: 50px 0;
+    padding-left: 90px;
+    margin: 0;
+
+    blockquote {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        margin: 0;
+    }
+
+    figcaption {
+        color: var(--text-primary);
+        font-size: 18px;
+        font-style: italic;
+        margin-top: 20px;
     }
 }
