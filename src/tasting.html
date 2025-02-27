@@ -200,6 +200,68 @@
             </figure>
         </section>
 
+        <section class="form-block">
+            <h2>ОСТАВИТЬ ЗАЯВКУ НА МЕРОПРИЯТИЕ</h2>
+
+            <form action="">
+                <div class="form-row">
+                    <select name="" id="">
+                        <option value="">Выбор программы дегустации</option>
+                        <option value="1">Винный квиз</option>
+                        <option value="2">Виски квиз</option>
+                    </select>
+                </div>
+
+                <div class="form-row input-custom">
+                    <span class="label">Выбор города:</span>
+
+                    <label>
+                        <input type="checkbox" name="form-city" value="Москва">
+                        Москва
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="form-city" value="Санкт-Петербург">
+                        Санкт-Петербург
+                    </label>
+                </div>
+
+                <div class="form-row date-custom">
+                    <label for="date">Дата ориентировочно:</label>
+
+                    <input type="date" id="date">
+                </div>
+
+                <div class="form-row">
+                    <input type="text" required autocomplete="" placeholder="Ваше имя *">
+                </div>
+
+                <div class="form-row">
+                    <input type="tel" required autocomplete="" placeholder="Телефон *">
+                </div>
+
+                <div class="form-row">
+                    <input type="email" required autocomplete="" placeholder="Email *">
+                </div>
+
+                <div class="form-row">
+                    <input type="text" placeholder="Ориентировочный адрес">
+                </div>
+
+                <div class="form-row">
+                    <textarea name="" id="" placeholder="Комментарий"></textarea>
+                </div>
+
+                <div class="form-action">
+                    <button type="submit" class="btn btn--primary">Отправить</button>
+                </div>
+            </form>
+
+            <p class="small">
+                Заполняя форму вы соглашаетесь с нашей <a href="#">политикой обработки данных</a>.
+            </p>
+        </section>
+
     </main>
 
     @@include('components/page-blocks/_footer.html')
