@@ -3,5 +3,18 @@
     &__inner {
         border-top: 1px solid;
         padding: 40px 0;
+
+        .header__contacts {
+            @include _840 {
+                flex-direction: column;
+                gap: 20px;
+
+                .flex-row {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+
+        }
     }
 }

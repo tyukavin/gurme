@@ -32,6 +32,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    @include _840 {
+        font-size: 0.95rem;
+    }
 }
 
 h1,
@@ -50,17 +53,27 @@ h1,
     font-size: 40px;
     font-weight: 400;
     text-transform: uppercase;
+    @include _840 {
+        font-size: 30px;
+    }
 }
 
 h2,
 .title-page {
-    margin-bottom: 50px;
     font-size: 36px;
+    margin-bottom: 50px;
     text-transform: uppercase;
+    @include _840 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
 }
 
 h3 {
     font-size: 24px;
+    @include _840 {
+        font-size: 20px;
+    }
 }
 
 img {
@@ -80,6 +93,9 @@ a:not(.btn) {
 
 section {
     margin-bottom: 100px;
+    @include _840 {
+        margin-bottom: 60px;
+    }
 }
 
 p {
@@ -207,8 +223,8 @@ textarea {
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    padding: 15px 74px;
-    line-height: 1;
+    padding: 13px 74px;
+    line-height: 1.2;
     font-family: 'Oswald', serif;
     font-size: 17px;
     font-weight: 400;
@@ -241,8 +257,8 @@ textarea {
 
 #backToTop {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 18px;
+    bottom: 120px;
 
     width: 50px;
     height: 50px;
@@ -276,7 +292,6 @@ textarea {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    color: #fff;
     height: 200px;
     font-size: 14px;
     display: flex;
@@ -292,6 +307,7 @@ textarea {
         gap: 36px;
 
         li {
+            color: #fff;
             position: relative;
 
             &:not(:last-child) {
@@ -312,6 +328,13 @@ textarea {
             &:last-child {
                 color: #929292;
                 pointer-events: none;
+            }
+
+            a {
+
+                &:hover {
+                    color: #fff;
+                }
             }
         }
     }
@@ -360,6 +383,12 @@ textarea {
     align-items: center;
     text-align: center;
     padding: 0 200px;
+    @include _840 {
+        height: auto;
+        padding: 30px 20px;
+        margin-right: -20px;
+        margin-left: -20px;
+    }
 
     p {
         line-height: 1.5;
@@ -370,16 +399,28 @@ textarea {
     display: flex;
     gap: 120px;
     margin-bottom: 120px;
+    @include _840 {
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
 
     &__img {
         position: relative;
         flex: none;
+        @include _840 {
+            width: 100%;
+        }
 
         .art-absolute {
             border: 20px solid #fff;
+            border-right: none;
             position: absolute;
             bottom: -60px;
-            right: -80px;
+            right: 0;
+            @include _840 {
+                width: 60%;
+            }
         }
     }
 }
@@ -390,11 +431,18 @@ textarea {
     display: flex;
     gap: 30px;
     margin: 80px 0 70px;
+    @include _840 {
+        flex-wrap: wrap;
+        margin: 40px 0 35px;
+    }
 }
 
 .about-item {
     flex: 1;
     text-align: center;
+    @include _840 {
+        flex: 1 1 100%;
+    }
 
     .icon {
         background-color: var(--text-primary);
@@ -404,16 +452,28 @@ textarea {
         align-items: center;
         justify-content: center;
         margin: 0 auto 40px;
+        @include _840 {
+            height: 120px;
+            width: 120px;
+            margin-bottom: 25px;
+        }
     }
 }
 
 .about-actions {
     display: flex;
     justify-content: space-around;
+    @include _840 {
+        flex-direction: column;
+        gap: 20px;
+    }
 
     .btn {
         flex: 1;
         max-width: 35%;
+        @include _840 {
+            max-width: 100%;
+        }
     }
 }
 
@@ -446,12 +506,19 @@ textarea {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    @include _840 {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
 }
 
 .team {
     position: relative;
     display: flex;
     gap: 30px;
+    @include _840 {
+        flex-wrap: wrap;
+    }
 
     h2 {
         margin-top: 0;
@@ -463,6 +530,9 @@ textarea {
 
     .team-spec {
         width: 260px;
+        @include _840 {
+            width: 100%;
+        }
     }
 
     &__content {
@@ -470,11 +540,20 @@ textarea {
 
         .teams {
             margin-top: -270px;
+            @include _840 {
+                margin-top: 0;
+            }
 
             .col {
+                @include _840 {
+                    flex: 1 1 100%;
+                }
 
                 &:nth-child(1) {
                     margin-top: 300px;
+                    @include _840 {
+                        margin-top: 0;
+                    }
                 }
             }
         }
@@ -486,6 +565,9 @@ textarea {
     position: relative;
     height: 480px;
     width: 100%;
+    @include _840 {
+        height: auto;
+    }
 
     &:hover {
         &::before {
@@ -529,11 +611,18 @@ textarea {
     display: flex;
     gap: 30px;
     flex: 1;
+    @include _840 {
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+    }
 
     .col {
         display: flex;
         flex-direction: column;
         gap: 30px;
+        @include _840 {
+            flex: 1 1 100%;
+        }
 
         &:nth-child(1) {
             margin-top: 100px;
@@ -548,6 +637,10 @@ textarea {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    @include _840 {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
 }
 
 .clients {
@@ -558,15 +651,36 @@ textarea {
     &__inner {
         display: flex;
         gap: 30px;
+        @include _840 {
+            flex-wrap: wrap;
+        }
 
         .col {
             flex: 1 1;
+            @include _840 {
+                flex: 1 1 100%;
+            }
 
             &:first-child {
                 p {
                     width: 75%;
+                    @include _840 {
+                        width: 100%;
+                    }
                 }
             }
+        }
+    }
+
+    .slider-controls {
+        position: absolute;
+        left: 0;
+        top: auto;
+        bottom: 45px;
+        @include _840 {
+            position: relative;
+            bottom: auto;
+            justify-content: center;
         }
     }
 }
@@ -579,6 +693,12 @@ textarea {
     padding-left: 20px;
     padding-right: 0;
     bottom: 100px;
+    @include _840 {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        padding-left: 0;
+    }
 
     &__item {
         box-shadow: 0 4px 60px -20px #0000001f;
@@ -609,10 +729,6 @@ textarea {
 }
 
 .slider-controls {
-    position: absolute;
-    left: 0;
-    top: auto;
-    bottom: 45px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -720,5 +836,143 @@ textarea {
         color: #D2D2D2;
         font-size: 13px;
         margin-top: 20px;
+    }
+}
+
+.condition-item {
+    display: flex;
+
+    &:not(:first-of-type) {
+        margin-top: 70px;
+    }
+
+    .head {
+        width: 100%;
+        max-width: 470px;
+        flex: 1 0 100%;
+
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    .content {
+
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            & + ul {
+                margin-top: 30px;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+
+            & ul {
+
+                li::before {
+                    background-color: var(--color-hover);
+                    border-radius: 50%;
+                }
+            }
+
+            li {
+                line-height: 30px;
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 5px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    background-color: var(--text-primary);
+                    left: 0;
+                    top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.event-wrap {
+
+    .slider-controls {
+        margin: 50px auto 40px;
+        justify-content: center;
+    }
+}
+
+.slider-event {
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        a {
+            display: block;
+            position: relative;
+
+            &::after {
+                content: '';
+                background-image: linear-gradient(transparent 40%, #022449 100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.blog {
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+    }
+}
+
+.blog-item {
+
+    time {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
+
+.image-text {
+    display: grid;
+    grid-template-columns: 40% auto;
+    line-height: 30px;
+    margin-top: 50px;
+
+    figure {
+        margin: 0;
+    }
+
+    .text {
+        padding: 0 40px;
+
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
     }
 }
