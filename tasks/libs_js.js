@@ -1,5 +1,6 @@
 const plugins = [
-	'src/js/swiper-bundle.min.js'
+	'src/js/swiper-bundle.min.js',
+	'src/js/fancybox.umd.js',
 ];
 const {
 	src,
