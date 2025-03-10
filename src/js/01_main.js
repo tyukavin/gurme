@@ -1,8 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    Fancybox.bind("[data-fancybox]", {
-        // Your custom options
-    });
+    Fancybox.bind("[data-fancybox]", {});
+
+    // Кнопка меню
+    (function() {
+
+        const openMenu = document.querySelector(".btn-menu");
+        const closeMenu = document.querySelector(".mobile-menu .close");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        openMenu.addEventListener("click", function() {
+            mobileMenu.classList.add("show");
+        });
+
+        closeMenu.addEventListener("click", function() {
+            mobileMenu.classList.remove("show");
+        });
+    })();
+
+    // Маски для полей
+    (function() {
+        Inputmask({
+            mask: "+7 (999) 999-99-99",
+            showMaskOnHover: false
+        }).mask("[type='tel']");
+
+        Inputmask({
+            regex: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
+            casing: "lower" // Автоматически в нижний регистр
+        }).mask("[name='email']");
+    })();
 
     // Инициализация слайдера на Главной
     (function() {

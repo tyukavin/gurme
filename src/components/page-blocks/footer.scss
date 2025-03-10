@@ -2,19 +2,55 @@
 
     &__inner {
         border-top: 1px solid;
-        padding: 40px 0;
+        padding: 26px 0 36px;
+        @include _840 {
+            padding: 20px 0 15px;
+        }
 
         .header__contacts {
+            align-items: flex-end;
+            gap: 30px;
+
+            & > .col {
+                flex: 1 0;
+            }
+
             @include _840 {
                 flex-direction: column;
                 gap: 20px;
+                text-align: center;
+                align-items: center;
 
                 .flex-row {
-                    flex-direction: column;
-                    gap: 20px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .flex-column {
+                    gap: 6px;
+                }
+
+                p {
+                    margin-bottom: 0.8em;
+                }
+
+                .link-icon {
+                    justify-content: center;
                 }
             }
-
         }
+    }
+
+    .ya-otziv {
+        margin: 0 auto;
+    }
+}
+
+.hashtag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @include _840 {
+        justify-content: center;
     }
 }

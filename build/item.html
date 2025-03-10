@@ -25,10 +25,43 @@
         <div class="header__inner">
             <a href="index.html" class="logo">
                 <picture>
+                    <source srcset="img/logo-min.jpg" media="(max-width: 840px)" />
                     <source srcset="img/logo.webp" type="image/webp">
-                    <img src="img/logo.png" alt="Логотип">
+                    <img src="img/logo.png" alt="Выездные дегустации, винные игры на корпоратив, тимбилдинг, день рождения и любое важное событие">
                 </picture>
             </a>
+
+            <div class="phone-mobile">
+                <p class="link-icon link-phone">
+                    <img src="img/phone.png" alt="">
+                    <a href="tel:+7 952 248 57 10">+7 952 248 57 10</a>
+                </p>
+
+                <div class="flex-row">
+                    <p class="link-icon">
+                        <svg width="15" height="15" viewBox="0 0 15 15">
+                            <use href="./img/sprite.svg#include--whatsapp"
+                                xlink:href="./img/sprite.svg#include--whatsapp" />
+                        </svg>
+                        <a href="#">WhatsApp</a>
+                    </p>
+
+                    <p class="link-icon">
+                        <svg width="16" height="13" viewBox="0 0 16 13">
+                            <use href="./img/sprite.svg#include--tlg"
+                                xlink:href="./img/sprite.svg#include--tlg" />
+                        </svg>
+                        <a href="#">Telegram</a>
+                    </p>
+                </div>
+            </div>
+
+            <button class="btn-menu">
+                <svg width="26" height="26" viewBox="0 0 26 26">
+                    <use href="./img/sprite.svg#include--mobile-menu"
+                        xlink:href="./img/sprite.svg#include--mobile-menu" />
+                </svg>
+            </button>
 
             <div class="header__content">
                 <div class="header__contacts">
@@ -63,7 +96,7 @@
                             <a href="tel:+7 952 248 57 10">+7 952 248 57 10</a>
                         </p>
 
-                        <p class="text-muted">ежедневно с 10:00</p>
+                        <p class="text-muted">работаем ежедневно с 10:00</p>
                     </div>
 
                     <div class="col">
@@ -72,7 +105,7 @@
                                 <use href="./img/sprite.svg#include--whatsapp"
                                     xlink:href="./img/sprite.svg#include--whatsapp" />
                             </svg>
-                            <span>Написать в <a href="#">WhatsApp</a> 24/7</span>
+                            <span>Написать в <a href="#"><strong>WhatsApp</strong></a> 24/7</span>
                         </p>
 
                         <p class="link-icon">
@@ -80,7 +113,7 @@
                                 <use href="./img/sprite.svg#include--tlg"
                                     xlink:href="./img/sprite.svg#include--tlg" />
                             </svg>
-                            <span>Написать в <a href="#">Telegram</a> 24/7</span>
+                            <span>Написать в <a href="#"><strong>Telegram</strong></a> 24/7</span>
                         </p>
 
                         <p class="socials">
@@ -131,14 +164,6 @@
                             </ul>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="tasting.html">Наборы</a>
-                            <ul class="sub-menu">
-                                <li><a href="item.html">Винный квиз</a></li>
-                                <li><a href="item.html">Винное казино</a></li>
-                                <li><a href="item.html">Слепая дегустация</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-nav__item">
                             <a href="tasting.html">Онлайн дегустации</a>
                             <ul class="sub-menu">
                                 <li><a href="item.html">Винный квиз</a></li>
@@ -147,7 +172,7 @@
                             </ul>
                         </li>
                         <li class="menu-nav__item">
-                            <a href="tasting.html">Услуги дополнительные</a>
+                            <a href="tasting.html">Аренда площадки</a>
                             <ul class="sub-menu">
                                 <li><a href="item.html">Винный квиз</a></li>
                                 <li><a href="item.html">Винное казино</a></li>
@@ -439,7 +464,7 @@
                 </div>
 
                 <div class="form-row">
-                    <input type="email" required autocomplete="" placeholder="Email *">
+                    <input type="text" name="email" required autocomplete="" placeholder="Email *">
                 </div>
 
                 <div class="form-row">
@@ -495,67 +520,69 @@
         <div class="footer__inner">
             <div class="header__contacts">
                 <div class="col">
-                    <div class="flex-row">
-                        <div class="col">
-                            <p class="text-muted">Москва и Санкт-Петербург</p>
-
-                            <p class="link-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14">
-                                    <use href="./img/sprite.svg#include--mail"
-                                        xlink:href="./img/sprite.svg#include--logo" />
-                                </svg>
-                                <a href="mailto:gourmetshop-present@yandex.ru">gourmetshop-present@yandex.ru</a>
-                            </p>
-
-                            <p class="link-icon">
-                                <svg width="14" height="14" viewBox="0 0 14 14">
-                                    <use href="./img/sprite.svg#include--mail"
-                                        xlink:href="./img/sprite.svg#include--logo" />
-                                </svg>
-                                <a href="mailto:winetravel@gourmetshop.ru">winetravel@gourmetshop.ru</a>
-                            </p>
-                        </div>
-
-                        <div class="col">
-                            <p class="link-icon">
-                                <img src="img/phone.png" alt="">
-                                <a href="tel:+7 952 248 57 10">+7 952 248 57 10</a>
-                            </p>
-
-                            <p class="text-muted">ежедневно с 10:00</p>
-                        </div>
-                    </div>
-
-                    <p class="text-muted flex-row">
-                        <span>#выездныедегустации</span>
-                        <span>#винныеигры</span>
-                        <span>#дегустациявин</span>
-                        <span>#винноеказино</span>
+                    <p class="link-icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14">
+                            <use href="./img/sprite.svg#include--mail"
+                                xlink:href="./img/sprite.svg#include--logo" />
+                        </svg>
+                        <a href="mailto:gourmetshop-present@yandex.ru">gourmetshop-present@yandex.ru</a>
                     </p>
-                </div>
 
-                <div class="col flex-column">
-                    <iframe class="lazy-loaded" data-lazy-type="iframe"
-                        data-src="https://yandex.ru/sprav/widget/rating-badge/227316429693" width="200" height="50"
-                        frameborder="0" src="https://yandex.ru/sprav/widget/rating-badge/227316429693"></iframe>
-                    <a href="#">Обработка персональных данных</a>
-                    <p>© 2017-2025 Gourmetshop.ru</p>
-                </div>
+                    <p class="link-icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14">
+                            <use href="./img/sprite.svg#include--mail"
+                                xlink:href="./img/sprite.svg#include--logo" />
+                        </svg>
+                        <a href="mailto:winetravel@gourmetshop.ru">winetravel@gourmetshop.ru</a>
+                    </p>
 
-                <div class="col">
                     <p class="link-icon">
                         <svg width="15" height="15" viewBox="0 0 15 15">
                             <use href="./img/sprite.svg#include--whatsapp"
                                 xlink:href="./img/sprite.svg#include--logo" />
                         </svg>
-                        <span>Написать в <a href="#">WhatsApp</a> 24/7</span>
+                        <span>Написать в <a href="#"><strong>WhatsApp</strong></a> 24/7</span>
                     </p>
 
-                    <p class="link-icon">
+                    <p class="link-icon m-0">
                         <svg width="16" height="13" viewBox="0 0 16 13">
                             <use href="./img/sprite.svg#include--tlg" xlink:href="./img/sprite.svg#include--logo" />
                         </svg>
-                        <span>Написать в <a href="#">Telegram</a> 24/7</span>
+                        <span>Написать в <a href="#"><strong>Telegram</strong></a> 24/7</span>
+                    </p>
+                </div>
+
+                <div class="col">
+                    <p class="text-muted">Москва и Московская область</p>
+
+                    <p class="link-icon">
+                        <img src="img/phone.png" alt="">
+                        <a href="tel:+7 952 248 57 10">+7 952 248 57 10</a>
+                    </p>
+
+                    <p class="text-muted">работаем ежедневно с 10:00</p>
+
+                    <p class="m-0">© 2017-2025 Gourmetshop.ru</p>
+                </div>
+
+                <div class="col flex-column">
+                    <iframe class="ya-otziv" data-lazy-type="iframe"
+                        data-src="https://yandex.ru/sprav/widget/rating-badge/227316429693" width="160" height="50"
+                        frameborder="0" src="https://yandex.ru/sprav/widget/rating-badge/227316429693">
+                    </iframe>
+                    <a id="zoon_widget_210x40_light" href="https://zoon.ru/service/5f3277e15823a558513e1907/">
+                        <img src="https://zoon.ru/wg/210x40/5f3277e15823a558513e1907/light/" data-lazy-type="image" data-src="https://zoon.ru/wg/210x40/5f3277e15823a558513e1907/light/" alt="Выездная студия дегустации вин Gourmetshop" title="Выездная студия дегустации вин Gourmetshop" width="210" height="40">
+                    </a>
+
+                    <a href="#">Обработка персональных данных</a>
+                </div>
+
+                <div class="col">
+                    <p class="text-muted hashtag">
+                        <span>#выездныедегустации</span>
+                        <span>#винныеигры</span>
+                        <span>#винноеказино</span>
+                        <span>#дегустациявин</span>
                     </p>
 
                     <p class="socials">
@@ -583,13 +610,106 @@
                         </a>
                     </p>
 
-                    <p class="text-muted">Разработка сайта – AristStudio</p>
+                    <p class="text-muted m-0">Разработка сайта – AristStudio</p>
                 </div>
             </div>
         </div>
     </div>
 </footer>
     <button id="backToTop" title="Вернуться наверх">↑</button>
+
+<div class="mobile-menu">
+    <button class="close">×</button>
+
+    <div class="mobile-contact flex-column">
+        <p class="text-muted">Москва и Московская область</p>
+
+        <p class="link-icon link-phone">
+            <img src="img/phone.png" alt="">
+            <a href="tel:+7 952 248 57 10">+7 952 248 57 10</a>
+        </p>
+
+        <p class="text-muted">работаем ежедневно с 10:00</p>
+
+        <p class="link-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14">
+                <use href="./img/sprite.svg#include--mail"
+                    xlink:href="./img/sprite.svg#include--mail" />
+            </svg>
+            <a href="mailto:gourmetshop-present@yandex.ru">gourmetshop-present@yandex.ru</a>
+        </p>
+
+        <p class="link-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14">
+                <use href="./img/sprite.svg#include--mail"
+                    xlink:href="./img/sprite.svg#include--mail" />
+            </svg>
+            <a href="mailto:winetravel@gourmetshop.ru">winetravel@gourmetshop.ru</a>
+        </p>
+
+        <div class="flex-row messanger">
+            <p class="link-icon">
+                <svg width="15" height="15" viewBox="0 0 15 15">
+                    <use href="./img/sprite.svg#include--whatsapp"
+                        xlink:href="./img/sprite.svg#include--whatsapp" />
+                </svg>
+                <a href="#">WhatsApp</a>
+            </p>
+
+            <p class="link-icon">
+                <svg width="16" height="13" viewBox="0 0 16 13">
+                    <use href="./img/sprite.svg#include--tlg"
+                        xlink:href="./img/sprite.svg#include--tlg" />
+                </svg>
+                <a href="#">Telegram</a>
+            </p>
+        </div>
+
+        <p class="socials">
+            <a href="#">
+                <svg viewBox="0 0 100 100">
+                    <use href="./img/sprite.svg#include--vk"
+                        xlink:href="./img/sprite.svg#include--vk" />
+                </svg>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 100 100">
+                    <use href="./img/sprite.svg#include--inst"
+                        xlink:href="./img/sprite.svg#include--inst" />
+                </svg>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 19 19">
+                    <use href="./img/sprite.svg#include--rutube"
+                        xlink:href="./img/sprite.svg#include--rutube" />
+                </svg>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 19 19">
+                    <use href="./img/sprite.svg#include--zen"
+                        xlink:href="./img/sprite.svg#include--zen" />
+                </svg>
+            </a>
+        </p>
+    </div>
+
+    <nav>
+        <ul class="menu-nav">
+            <li class="menu-nav__item">
+                <a href="#">О нас</a>
+            </li>
+            <li class="menu-nav__item">
+                <a href="tasting.html">Выездные дегустации и винные игры</a>
+            </li>
+            <li class="menu-nav__item">
+                <a href="tasting.html">Онлайн дегустации</a>
+            </li>
+            <li class="menu-nav__item">
+                <a href="tasting.html">Аренда площадки</a>
+            </li>
+        </ul>
+    </nav>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
