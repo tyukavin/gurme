@@ -70,7 +70,9 @@
 .phone-mobile {
     display: none;
     @include _840 {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
 
         p {
             font-size: .8em;
@@ -79,7 +81,6 @@
         }
 
         .flex-row {
-            margin-top: 10px;
             gap: 12px;
         }
 

@@ -636,6 +636,8 @@ textarea {
     position: relative;
     height: 480px;
     width: 100%;
+    min-width: 270px;
+    overflow: hidden;
     @include _840 {
         height: 340px;
 
@@ -824,7 +826,7 @@ textarea {
         position: relative;
         font-family: 'Oswald', serif;
         font-size: 16px;
-        width: 40px;
+        width: 56px;
 
         .swiper-pagination-current {
             color: var(--text-primary);
@@ -980,6 +982,7 @@ textarea {
         width: 100%;
         max-width: 470px;
         flex: 1 0 100%;
+        padding-right: 30px;
 
         h2 {
             margin-top: 0;
@@ -987,6 +990,7 @@ textarea {
     }
 
     .content {
+        flex: 1;
 
         p {
             &:first-child {
@@ -1116,4 +1120,27 @@ textarea {
             }
         }
     }
+}
+
+.overview-wrap {
+
+    section {
+        margin-top: 50px;
+    }
+
+    a:not(.btn) {
+        color: var(--text-primary);
+    }
+}
+
+.somelie {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
 }
