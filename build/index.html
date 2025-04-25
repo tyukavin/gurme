@@ -127,8 +127,8 @@
                             </a>
                             <a href="#">
                                 <svg viewBox="0 0 100 100">
-                                    <use href="./img/sprite.svg#include--inst"
-                                        xlink:href="./img/sprite.svg#include--inst" />
+                                    <use href="./img/sprite.svg#include--pinterest"
+                                        xlink:href="./img/sprite.svg#include--pinterest" />
                                 </svg>
                             </a>
                             <a href="#">
@@ -654,8 +654,8 @@
                         </a>
                         <a href="#">
                             <svg viewBox="0 0 100 100">
-                                <use href="./img/sprite.svg#include--inst"
-                                    xlink:href="./img/sprite.svg#include--inst" />
+                                <use href="./img/sprite.svg#include--pinterest"
+                                    xlink:href="./img/sprite.svg#include--pinterest" />
                             </svg>
                         </a>
                         <a href="#">
@@ -681,6 +681,13 @@
 
 <div class="mobile-menu">
     <button class="close">×</button>
+
+    <a href="index.html" class="logo">
+        <picture>
+            <source srcset="img/logo.webp" type="image/webp">
+            <img src="img/logo.png" alt="Выездные дегустации, винные игры на корпоратив, тимбилдинг, день рождения и любое важное событие">
+        </picture>
+    </a>
 
     <div class="mobile-contact flex-column">
         <p class="text-muted">Москва и Московская область</p>
@@ -758,15 +765,24 @@
         <ul class="menu-nav">
             <li class="menu-nav__item">
                 <a href="#">О нас</a>
+                <button class="btn-collapse js-submenu"></button>
             </li>
             <li class="menu-nav__item">
                 <a href="tasting.html">Выездные дегустации и винные игры</a>
+                <button class="btn-collapse js-submenu"></button>
             </li>
             <li class="menu-nav__item">
                 <a href="tasting.html">Онлайн дегустации</a>
+                <button class="btn-collapse js-submenu"></button>
+                <ul class="sub-menu">
+                    <li><a href="item.html">Винный квиз</a></li>
+                    <li><a href="item.html">Винное казино</a></li>
+                    <li><a href="item.html">Слепая дегустация</a></li>
+                </ul>
             </li>
             <li class="menu-nav__item">
                 <a href="tasting.html">Аренда площадки</a>
+                <button class="btn-collapse js-submenu"></button>
             </li>
         </ul>
     </nav>

@@ -24,6 +24,10 @@
 
 html {
     font-size: 16px;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 html,
@@ -34,6 +38,8 @@ body {
 
 body {
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
     color: var(--text-black);
     font-size: 1rem;
     font-family: 'Montserrat', serif;
@@ -74,8 +80,8 @@ h2,
     margin-bottom: 50px;
     text-transform: uppercase;
     @include _840 {
-        font-size: 25px;
-        margin-bottom: 35px;
+        font-size: 24px;
+        margin-bottom: 30px;
     }
 }
 
@@ -116,7 +122,7 @@ p {
     margin: 1em 0;
 
     & + p {
-        margin-top: 2em;
+        margin-top: 1.5em;
     }
 }
 
@@ -125,6 +131,7 @@ textarea,
 select {
     background-color: transparent;
     border: none;
+    border-radius: 0;
     border-bottom: 2px solid;
     color: inherit;
     font-size: 16px;
@@ -475,6 +482,10 @@ textarea {
         margin-bottom: 60px;
     }
 
+    h2 {
+        margin-top: 0;
+    }
+
     &__img {
         position: relative;
         flex: none;
@@ -486,10 +497,12 @@ textarea {
             border: 15px solid #fff;
             border-right: none;
             position: absolute;
-            bottom: -60px;
+            top: 350px;
             right: 0;
             @include _840 {
-                width: 60%;
+                top: auto;
+                bottom: -50px;
+                width: 50%;
             }
         }
     }
@@ -842,7 +855,7 @@ textarea {
     &__inner {
         display: flex;
         align-items: center;
-        gap: 130px;
+        gap: 90px;
         margin-bottom: 70px;
         @include _840 {
             flex-wrap: wrap;
@@ -871,10 +884,11 @@ textarea {
         padding: 0;
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         gap: 60px 40px;
         @include _840 {
-            gap: 30px 20px;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
         }
 
         h3 {
@@ -887,9 +901,6 @@ textarea {
 
         img {
             margin: 0 auto;
-            @include _840 {
-                width: 70%;
-            }
         }
     }
 }
@@ -962,6 +973,13 @@ textarea {
         color: #D2D2D2;
         font-size: 13px;
         margin-top: 20px;
+
+        a {
+            &:hover {
+                color: inherit;
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -983,9 +1001,16 @@ textarea {
         max-width: 470px;
         flex: 1 0 100%;
         padding-right: 30px;
+        @include _840 {
+            padding-right: 0;
+            max-width: 100%;
+        }
 
         h2 {
             margin-top: 0;
+            position: sticky;
+            top: 0;
+            text-wrap: balance;
         }
     }
 
@@ -993,13 +1018,24 @@ textarea {
         flex: 1;
 
         p {
+            line-height: 26px;
+
             &:first-child {
                 margin-top: 0;
             }
 
-            & + ul {
-                margin-top: 30px;
+            & + p {
+                margin-top: 1em;
             }
+
+            & + ul {
+                margin-top: 1em;
+            }
+        }
+
+        a {
+            color: var(--text-primary);
+            text-decoration: underline;
         }
 
         ul {
@@ -1052,6 +1088,10 @@ textarea {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+        @include _840 {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
 
         a {
             display: block;
@@ -1066,6 +1106,10 @@ textarea {
                 height: 100%;
                 width: 100%;
             }
+        }
+
+        & + .event-action {
+            margin-top: 50px;
         }
     }
 }
@@ -1106,6 +1150,10 @@ textarea {
 
     figure {
         margin: 0;
+
+        img {
+            width: 100%;
+        }
     }
 
     .text {
@@ -1143,4 +1191,34 @@ textarea {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 30px;
+}
+
+.contact-map {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+    @include _840 {
+        gap: 10px;
+    }
+
+    &__aside {
+        min-width: 300px;
+    }
+
+    iframe {
+        flex: 1 0;
+    }
+}
+
+.contact-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    p {
+        flex: 1 0;
+        margin: 0;
+        min-width: 260px;
+    }
 }

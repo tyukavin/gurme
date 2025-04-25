@@ -121,6 +121,8 @@
         flex: 1 auto;
         @include _840 {
             flex-basis: 100%;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         &:hover {
@@ -160,6 +162,21 @@
             }
         }
 
+        .btn-collapse {
+            @include _840 {
+                background-color: #7a000045;
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIzIiB2aWV3Qm94PSIwIDAgNiAzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNS4zODA5NSAwLjA5MDI4NTRDNS41MzgxOSAtMC4wNDQ0OTc2IDUuNzc0OTMgLTAuMDI2Mjg3MSA1LjkwOTcxIDAuMTMwOTZDNi4wNDQ1IDAuMjg4MjA3IDYuMDI2MjkgMC41MjQ5NDMgNS44NjkwNCAwLjY1OTcyNkwzLjI0NDA1IDIuOTA5NzJDMy4xMDM2MSAzLjAzMDA5IDIuODk2MzkgMy4wMzAwOSAyLjc1NTk1IDIuOTA5NzJMMC4xMzA5NiAwLjY1OTcyNkMtMC4wMjYyODcxIDAuNTI0OTQzIC0wLjA0NDQ5NzYgMC4yODgyMDcgMC4wOTAyODU0IDAuMTMwOTZDMC4yMjUwNjggLTAuMDI2Mjg3MSAwLjQ2MTgwNSAtMC4wNDQ0OTc2IDAuNjE5MDUyIDAuMDkwMjg1NEwzIDIuMTMxMUw1LjM4MDk1IDAuMDkwMjg1NFoiIGZpbGw9IiMxMjEyMTIiLz4KPC9zdmc+Cg==");
+                background-repeat: no-repeat;
+                background-size: 30%;
+                background-position: center;
+                appearance: none;
+                border: none;
+                width: 15%;
+                border: 1px solid var(--text-black);
+                border-right: none;
+            }
+        }
+
         & > a {
             border-top: 1px solid;
             border-bottom: 1px solid;
@@ -172,6 +189,10 @@
             text-decoration: none;
             width: 100%;
             text-align: center;
+            @include _840 {
+                text-align: left;
+                width: 85%;
+            }
 
             &::after {
                 content: '';
@@ -187,6 +208,7 @@
                 transform: none;
                 transition: transform .2s;
                 @include _840 {
+                    display: none;
                     transform: rotate(-90deg);
                 }
             }
@@ -211,6 +233,16 @@
     opacity: 0;
     transform: translateY(15px);
     transition: .2s ease;
+    @include _840 {
+        display: none;
+        background-color: transparent;
+        color: inherit;
+        position: static;
+        pointer-events: all;
+        opacity: 1;
+        transform: none;
+        white-space: normal;
+    }
 
     li {
         &:not(:last-child) a {
@@ -222,10 +254,16 @@
             padding: 8px 0;
             color: #fff;
             text-decoration: none;
+            @include _840 {
+                color: inherit;
+            }
 
             &:hover {
                 color: #fff;
                 text-decoration: underline;
+                @include _840 {
+                    color: inherit;
+                }
             }
         }
     }
@@ -300,9 +338,15 @@
         justify-content: center;
     }
 
+    .logo {
+        display: inline-block;
+        width: 120px;
+        margin: 0 20px;
+    }
+
     .mobile-contact {
         font-size: 13px;
-        padding: 40px 20px 20px;
+        padding: 25px 20px 20px;
 
         p {
             margin: 0;

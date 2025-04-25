@@ -8,14 +8,41 @@ document.addEventListener('DOMContentLoaded', () => {
         const openMenu = document.querySelector(".btn-menu");
         const closeMenu = document.querySelector(".mobile-menu .close");
         const mobileMenu = document.querySelector(".mobile-menu");
+        const html = document.querySelector("html");
 
         openMenu.addEventListener("click", function() {
             mobileMenu.classList.add("show");
+            html.classList.add("no-scroll");
         });
 
         closeMenu.addEventListener("click", function() {
             mobileMenu.classList.remove("show");
+            html.classList.remove("no-scroll");
         });
+    })();
+
+    (function() {
+
+        const handleCheckboxGroup = (name) => {
+            const checkboxes = document.querySelectorAll(`input[name="${name}"]`);
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        checkboxes.forEach(otherCheckbox => {
+                            if(otherCheckbox !== this) {
+                                otherCheckbox.checked = false;
+                            }
+                        });
+                    }
+                });
+            });
+        };
+
+        // Инициализация для группы чекбоксов с name="city"
+        handleCheckboxGroup('city');
+        handleCheckboxGroup('arenda-bokal');
+        handleCheckboxGroup('arenda-stol');
     })();
 
     // Маски для полей
@@ -24,11 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
             mask: "+7 (999) 999-99-99",
             showMaskOnHover: false
         }).mask("[type='tel']");
+    })();
 
-        Inputmask({
-            regex: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
-            casing: "lower" // Автоматически в нижний регистр
-        }).mask("[name='email']");
+    // Раскрытие подменю
+    (function() {
+
+        $('.js-submenu').click(function() {
+
+            $(this).parent().find('.sub-menu').slideToggle();
+        });
     })();
 
     // Инициализация слайдера на Главной
@@ -79,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             speed: 400,
             slidesPerView: 1,
 
-            autoplay: {},
+            autoplay: false,
 
             pagination: {
                 el: '.swiper-pagination',
@@ -91,6 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextEl: '.slider-clients__arrow.--next',
                 prevEl: '.slider-clients__arrow.--prev',
             },
+
+            breakpoints: {
+                840: {
+                    autoplay: {
+                        enabled: true,
+                        delay: 4000,
+                    },
+                },
+            }
         });
     })();
 
